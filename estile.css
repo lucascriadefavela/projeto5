@@ -1,0 +1,62 @@
+raiz {
+  --cinza :  #c50000 ; _
+  --vermelha :  # e93d50 ;
+  --vermelha-escura :  # af303f ;
+  --branca :  #fff ; _
+  --luz :  rgb ( 229 ,  255 ,  0 );
+}
+corpo {
+  alinhar itens : centro;
+  plano de fundo :  gradiente linear ( 45 graus ,  # a7cfdf  0 % , # 23538a  100 % );
+  exibição : flexível;
+  justificar-conteúdo : centro;
+  direção flexível : coluna;
+  família de fontes :  'Montserrat' , sem serifa;
+  altura mínima :  100 vh ;
+}
+h1 {
+  cor :  var ( -branca );
+  margem inferior :  20 px ;
+  tamanho da fonte :  2 rem ;
+}
+. teclado {
+  background :  gradiente linear (para baixo ,  # eeeeee  0 % , # cccccc  100 % );
+  sombra da caixa :  6 px  8 px  0  6 px  # 666 ,  10 px  10 px  10 px  # 000 ;
+  raio da borda :  30 px ;
+  exibição : grade;
+  lacuna :  10 px ;
+  colunas de modelo de grade :  repetir ( 3 ,  1 fr );
+  preenchimento :  10 px ;
+}
+. tecla {
+  cor de fundo :  var ( -branca );
+  raio da borda :  30 px ;
+  box-shadow :  3 px  3 px  0  var ( --cinza );
+  cor :  var ( -vermelha );
+  cursor : ponteiro;
+  altura :  120px ; _
+  tamanho da fonte :  1,75 em ;
+  peso da fonte : negrito;
+  altura da linha :  120 px ;
+  alinhamento de texto : centro;
+  largura :  120px ; _
+}
+. tecla . ativa ,
+. tecla : ativo {
+  cor de fundo :  var ( -vermelha );
+  borda :  var sólida   de 4 px ( --vermelha );
+  box-shadow :  3 px  3 px  0  var ( --vermelha-escura ) inserção;
+  cor :  var ( -branca );
+  esboço : nenhum;
+}
+. tecla . foco ,
+. tecla : foco {
+  esboço : nenhum;
+  box-shadow :  1 px  1 px  10 px  var ( --luz );
+}
+
+. tecla . ativo : foco ,
+. tecla . ativa : foco ,
+. tecla : ativo : foco {
+  box-shadow :  3 px  3 px  0  var ( --vermelha-escura ) inserção ,  1 px  1 px  10 px  var ( --luz );
+}
